@@ -1,17 +1,19 @@
 # Logs Analysis
 
-A reporting tool that prints out reports in plain text using Python and PostgreSQL.
+A reporting tool that prints reports to the terminal using Python and PostgreSQL.
 
 
-## How to Run the Tool
+## How to Run the Application
 
-Run `python newsdatadb.py` to run to the tool. These are the methods used to generate the report. Results will be displayed in terminal.
+Run the command `python newsdatadb.py` to run the reports. Results will be displayed in terminal. These are the methods used to generate the reports:
 
 - `get_popular_articles()` Returns the most popular three articles of all time and their corresponding views.
 
-- `get_popular_articles()` Returns the most popular authors of all time with their correspoding total article views.
+- `get_popular_articles()` Returns the most popular authors of all time with their corresponding total article views.
 
 - `get_error_days()` Returns all days where over 1% of link requests were errors.
+
+For a sample of output, please view `output_example.txt`.
 
 
 ## Views
@@ -26,7 +28,7 @@ group by time::date order by time::date;
 
 ## Contributing
 
-I will not accept pull requests as this project was created for the FSND Udacity course.
+Pull requests will not be accepted, as this project was created for the FSND Udacity program.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
