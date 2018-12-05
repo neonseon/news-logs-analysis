@@ -11,5 +11,4 @@ Most popular authors of all time:
 * Markoff Chaney - 84557 views
 
 Days where over 1% of requests were errors:
-* July 17, 2016 - 2.32% errors
-
+* July 17, 2016 - 2.26 % errors
