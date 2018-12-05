@@ -55,7 +55,7 @@ def get_error_days():
     c.execute("""
       SELECT to_char(time::date, 'FMMonth FMDD, YYYY')
       AS date, round(percentage, 2) AS errors
-      FROM (SELECT log.time::date,(error::decimal/success * 100.0)
+      FROM (SELECT log.time::date,(error::decimal/(success + error) * 100.0)
       AS percentage
       FROM (SELECT time::date, count(*) AS success
       FROM log
