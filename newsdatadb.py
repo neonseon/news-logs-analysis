@@ -17,7 +17,7 @@ def get_popular_articles():
       FROM log
       GROUP BY path
       ORDER BY num DESC) log JOIN articles
-      ON (log.path LIKE '%' || articles.slug)
+      ON log.path = '/article/' || articles.slug
       LIMIT 3;
     """)
     articles = c.fetchall()
