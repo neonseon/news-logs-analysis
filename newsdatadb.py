@@ -73,7 +73,7 @@ def get_error_days():
     for date, errors in days:
         print('* {} - {} % errors'.format(date, errors))
 
-
-get_popular_articles()
-get_popular_authors()
-get_error_days()
+if __name__ == '__main__':
+    get_popular_articles()
+    get_popular_authors()
+    get_error_days()
