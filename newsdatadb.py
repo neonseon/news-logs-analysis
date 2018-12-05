@@ -48,6 +48,7 @@ def get_popular_authors():
     for name, views in authors:
         print('* {} - {} views'.format(name, views))
 
+
 def get_error_days():
     """Return days where over 1% of requests were errors."""
     db = psycopg2.connect(database=DBNAME)
@@ -72,6 +73,7 @@ def get_error_days():
     print "\nDays where over 1% of requests were errors:"
     for date, errors in days:
         print('* {} - {} % errors'.format(date, errors))
+
 
 if __name__ == '__main__':
     get_popular_articles()
