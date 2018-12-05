@@ -23,8 +23,8 @@ def get_popular_articles():
     articles = c.fetchall()
     db.close()
     print "\nMost popular articles of all time:"
-    for x in articles:
-        print('* "' + x[0] + '" - ' + str(x[1]) + ' views')
+    for title, views in articles:
+        print('* "{}" - {} views'.format(title, views))
 
 
 def get_popular_authors():
@@ -45,9 +45,8 @@ def get_popular_authors():
     authors = c.fetchall()
     db.close()
     print "\nMost popular authors of all time:"
-    for x in authors:
-        print("* " + x[0] + " - " + str(x[1]) + " views")
-
+    for name, views in authors:
+        print('* {} - {} views'.format(name, views))
 
 def get_error_days():
     """Return days where over 1% of requests were errors."""
@@ -71,8 +70,8 @@ def get_error_days():
     days = c.fetchall()
     db.close()
     print "\nDays where over 1% of requests were errors:"
-    for x in days:
-        print("* " + x[0] + " - " + str(x[1]) + "% errors\n")
+    for date, errors in days:
+        print('* {} - {} % errors'.format(date, errors))
 
 
 get_popular_articles()
